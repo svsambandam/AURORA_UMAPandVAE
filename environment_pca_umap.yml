@@ -1,4 +1,4 @@
-name: rapids
+name: aurora-pca-umap
 channels:
   - nvidia
   - rapidsai
