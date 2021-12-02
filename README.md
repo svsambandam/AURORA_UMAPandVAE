@@ -1,7 +1,7 @@
 # EXPLORING DISTRIBUTION DRIVEN LATENT SPACES FOR QUALITY DIVERSITY | Expanding upon AURORA
 Work done for term project for Jeff Clune's 532J Course on Never-ending RL
 
-Rrobots benefit from learning a large set of diverse behaviours; but the task of defining a good behavior descriptor requires prior knowledge of the specific task and some good engineering. Dr. Antoine Cully proposes AURORA that mitigiates this pitfall by combinng dimensionality reduction and quality diversity algorithms, to handle the specific problem of autonomous learning. This universal algorithm for robotic skill discovery is done without user input. This paper leverages PCA and autoencoders to project sensory data into low dimensional space that can be explored using evolutionary algorithms. This project is an extension to that work by exploring dimensionality reduction algorithms  that encourage the latent representations to follow specific distributions, namely Gaussian using VAE and Reimannian using UMAP.
+Robots benefit from learning a large set of diverse behaviours; but the task of defining a good behavior descriptor requires prior knowledge of the specific task and some good engineering. Dr. Antoine Cully proposes AURORA that mitigiates this pitfall by combinng dimensionality reduction and quality diversity algorithms, to handle the specific problem of autonomous learning. This universal algorithm for robotic skill discovery is done without user input. This paper leverages PCA and autoencoders to project sensory data into low dimensional space that can be explored using evolutionary algorithms. This project is an extension to that work by exploring dimensionality reduction algorithms  that encourage the latent representations to follow specific distributions, namely Gaussian using VAE and Reimannian using UMAP.
 
 
 This work is based off of the original research done in 2019 by Dr Antoine Cully from "Autonomous skill discovery with Quality-Diversity and Unsupervised Descriptors" ( https://arxiv.org/abs/1905.11874)
@@ -23,19 +23,19 @@ Running the main code requires you to run in different conda environments depend
 RUNNING EXPERIMENTS
 You can run this code with the command "**$python3 main_aurora.py**". This command line can take multiple arguments:
 
---version : A string that defines which algorithm to run. The default is "null". Can take as argument:
-"GT" to generate a reference ground truth distribution
-"genotype" to run the genotype method
-"pretrainedPCA" to run the pretrained version of AURORA-PCA
-"incrementalPCA" to run the incremental version of AURORA-PCA
-"pretrainedAE" to run the pretrained version of AURORA-AE
-"incrementalAE" to run the incremental version of AURORA-AE
-"pretrainedVAE" to run the pretrained version of AURORA-VAE
-"incrementalVAE" to run the incremental version of AURORA-VAE
-"pretrainedUMAP" to run the pretrained version of AURORA-UMAP
-"incrementalUMAP" to run the incremental version of AURORA-UMAP
---plot_runs : An int that will choose whether to plot metrics. If you have run all of the variations, enter "1". The default is "0".
---num_epochs : An int that sets the number of epochs that will be used to train the VAEs and AEs in the AE versions. The default is "500".
+* --version : A string that defines which algorithm to run. The default is "null". Can take as argument:
+  * "**GT**" to generate a reference ground truth distribution
+  * "**genotype" to run the genotype method
+  * "**pretrainedPCA**" to run the pretrained version of AURORA-PCA
+  * "**incrementalPCA**" to run the incremental version of AURORA-PCA
+  * "**pretrainedAE**" to run the pretrained version of AURORA-AE
+  * "**incrementalAE**" to run the incremental version of AURORA-AE
+  * "**pretrainedVAE**" to run the pretrained version of AURORA-VAE
+  * "**incrementalVAE**" to run the incremental version of AURORA-VAE
+  * "**pretrainedUMAP**" to run the pretrained version of AURORA-UMAP
+  * "**incrementalUMAP**" to run the incremental version of AURORA-UMAP
+* --plot_runs : An int that will choose whether to plot metrics. If you have run all of the variations, enter "1". The default is "0".
+* --num_epochs : An int that sets the number of epochs that will be used to train the VAEs and AEs in the AE versions. The default is "500".
 
 Note, that re-running code will overwrite whatever plots and data is currenlty inside the RUN_DATA folder.
 
