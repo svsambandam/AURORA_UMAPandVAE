@@ -2521,8 +2521,7 @@ if __name__ == "__main__":
     parser.add_argument('--version', type=str, default='null', help = "Which version of AURORA-AE do you want to run? 'incremental' or 'pretrained'?")
     parser.add_argument('--plot_runs', type=int, default=0, help = "Do you want to plot the results of all the algorithms? '0' for no, '1' for yes")
     parser.add_argument('--num_epochs', type=int, default=500, help = "How many epochs do you want to run training for?")
-    parser.add_argument('--everything', type=bool, default=False, help = "Do you want to run my project?")
-
+    
     args = parser.parse_args()
 
     
