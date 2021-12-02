@@ -25,7 +25,7 @@ You can run this code with the command "**$python3 main_aurora.py**". This comma
 
 * --version : A string that defines which algorithm to run. The default is "null". Can take as argument:
   * "**GT**" to generate a reference ground truth distribution
-  * "**genotype" to run the genotype method
+  * "**genotype**" to run the genotype method
   * "**pretrainedPCA**" to run the pretrained version of AURORA-PCA
   * "**incrementalPCA**" to run the incremental version of AURORA-PCA
   * "**pretrainedAE**" to run the pretrained version of AURORA-AE
