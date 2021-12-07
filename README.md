@@ -10,17 +10,25 @@ This repo contains my implementation of AURORA variants that contain PCA, VAE, a
 
 
 SETTING UP THE ENVIRONMENTS
+
 Running the main code requires you to run in different conda environments depending on the version run:
   When running PCA and UMAP which uses CuML:  conda env create -f environment_pca_umap.yml 
+  
   "**conda activate aurora-pca-umap**"
   
+  
   When running AE and VAE which uses tensorflow v1:  conda env create -f environment_ae_vae.yml 
+  
   "**conda activate aurora-ae-vae**"
+  
+  *note, cuML is not installed in the aurora-ae-vae environment, so you must comment out lines 10 and 11 containing cuml in control.py before running 
+  
   
   When running ground truth or genotype, you can use either environment
   
 
 RUNNING EXPERIMENTS
+
 You can run this code with the command "**$python3 main_aurora.py**". This command line can take multiple arguments:
 
 * --version : A string that defines which algorithm to run. The default is "null". Can take as argument:
